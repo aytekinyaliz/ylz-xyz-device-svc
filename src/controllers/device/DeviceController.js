@@ -13,9 +13,10 @@ class DeviceController {
 
   async create(req, res, next) {
     try {
-      const device = req.body;
+      const { id: userId } = res.locals.user;
+      const { serialNumber, name } = req.body;
 
-      const id = await deviceDomainInstance.create(device);
+      const id = await deviceDomainInstance.create({ serialNumber, name, userId });
 
       res.status(201).json({ id });
     } catch(err) {

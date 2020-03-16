@@ -2,13 +2,12 @@ const deviceRepositoryInstance = require('../repositories/DeviceRepository');
 
 
 class DeviceDomain {
-
   async getAll() {
     return await deviceRepositoryInstance.getAll();
   }
 
-  async create(project) {
-    return await deviceRepositoryInstance.create(project);
+  async create({ serialNumber, name, userId }) {
+    return await deviceRepositoryInstance.create({ serialNumber, name, owner: userId, createdBy: userId});
   }
 }
 

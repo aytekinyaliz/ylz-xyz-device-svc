@@ -2,7 +2,7 @@ const firestore = require('../services/firestore');
 
 class DeviceRepository {
   constructor() {
-    this.collectionName = 'devices';
+    this.collectionName = 'Devices';
     this.devicesCollection = firestore.collection(this.collectionName);
   }
   
@@ -17,11 +17,13 @@ class DeviceRepository {
     return devices;
   }
   
-  async create({ name, owner }) {
+  async create({ serialNumber, name, userId }) {
     const device = await this.devicesCollection.add({
+      serialNumber,
       name,
-      owner,
-      createdAt: new Date()
+      owner: userId,
+      createdAt: new Date(),
+      createdBy: userId
     });
   
     return device.id;

@@ -1,18 +1,17 @@
 const { Router } = require('express');
+const { authLevel, authMiddleware } = require('ylz-xyz-auth-mdw');
 
 const deviceControllerInstance = require('./DeviceController');
 
-
 const router = Router();
 
-
 router.route('/').get(
-  // auth,
+  authMiddleware(authLevel.private),
   deviceControllerInstance.getAll
 );
 
 router.route('/').post(
-  // auth,
+  authMiddleware(authLevel.private),
   deviceControllerInstance.create
 );
 

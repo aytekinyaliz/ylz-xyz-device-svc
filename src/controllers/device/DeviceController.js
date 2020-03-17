@@ -1,3 +1,5 @@
+const { libs:{constants:{HttpStatusCode}}} = require('ylz-xyz-common');
+
 const deviceDomainInstance = require('../../domains/DeviceDomain');
 
 class DeviceController {
@@ -18,7 +20,7 @@ class DeviceController {
 
       const id = await deviceDomainInstance.create({ serialNumber, name, userId });
 
-      res.status(201).json({ id });
+      res.status(HttpStatusCode.CREATED).json({ id });
     } catch(err) {
       next(err);
     }

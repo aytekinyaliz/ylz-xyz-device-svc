@@ -4,17 +4,17 @@ metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2020-03-17T14:49:14Z"
-  generation: 1
+  generation: 2
   labels:
     app: ylz-xyz-device-svc
   name: ylz-xyz-device-svc
   namespace: default
-  resourceVersion: "278817"
+  resourceVersion: "280203"
   selfLink: /apis/apps/v1/namespaces/default/deployments/ylz-xyz-device-svc
   uid: 78a04eca-685e-11ea-b055-42010a9c00b1
 spec:
   progressDeadlineSeconds: 600
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -109,7 +109,7 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
 status:
-  availableReplicas: 3
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2020-03-17T14:49:24Z"
     lastUpdateTime: "2020-03-17T14:49:24Z"
@@ -123,7 +123,7 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  observedGeneration: 1
-  readyReplicas: 3
-  replicas: 3
-  updatedReplicas: 3
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

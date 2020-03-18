@@ -1,6 +1,6 @@
 const express = require('express');
 
-const projectRouter = require("./controllers/project/routes");
+const deviceRouter = require("./controllers/device/routes");
 
 
 class Router {
@@ -18,7 +18,7 @@ class Router {
   }
 
   initControllerRoutes() {
-    this.router.use("/projects", projectRouter);
+    this.router.use("/devices", deviceRouter);
   }
 }
 

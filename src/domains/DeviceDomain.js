@@ -6,8 +6,21 @@ class DeviceDomain {
     return await deviceRepositoryInstance.getAll();
   }
 
+  async get(id) {
+    return await deviceRepositoryInstance.get(id);
+  }
+
   async create({ serialNumber, name, userId }) {
-    return await deviceRepositoryInstance.create({ serialNumber, name, owner: userId, createdBy: userId});
+    let device = await deviceRepositoryInstance.getBySerialNumber({ serialNumber });
+
+    if(device) {
+      const err = new Error('Device already exists!');
+      err.code = 'duplicate';
+
+      throw err;
+    }
+
+    return await deviceRepositoryInstance.create({ serialNumber, name, createdBy: userId});
   }
 }
 

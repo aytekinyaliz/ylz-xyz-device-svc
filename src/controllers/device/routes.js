@@ -10,6 +10,11 @@ router.route('/').get(
   deviceControllerInstance.getAll
 );
 
+router.route('/:id').get(
+  authMiddleware(authLevel.private),
+  deviceControllerInstance.getOne
+);
+
 router.route('/').post(
   authMiddleware(authLevel.private),
   deviceControllerInstance.create

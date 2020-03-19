@@ -39,7 +39,7 @@ spec:
             configMapKeyRef:
               key: "FIRESTORE_TYPE"
               name: "ylz-xyz-device-svc-config-ncgj"
-        - name: "FIRESTORE_PROECT_ID"
+        - name: "FIRESTORE_PROJECT_ID"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_PROJECT_ID"

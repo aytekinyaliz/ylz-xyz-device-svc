@@ -1,19 +1,19 @@
-apiVersion: autoscaling/v2beta1
-kind: HorizontalPodAutoscaler
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
 metadata:
+  name: "ylz-xyz-device-svc-hpa-vvjp"
+  namespace: "default"
   labels:
-    app: ylz-xyz-device-svc
-  name: ylz-xyz-device-svc-hpa-fmky
-  namespace: default
+    app: "ylz-xyz-device-svc"
 spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "ylz-xyz-device-svc"
+    apiVersion: "apps/v1"
+  minReplicas: 1
   maxReplicas: 5
   metrics:
-  - resource:
-      name: cpu
+  - type: "Resource"
+    resource:
+      name: "cpu"
       targetAverageUtilization: 80
-    type: Resource
-  minReplicas: 1
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: ylz-xyz-device-svc

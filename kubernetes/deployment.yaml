@@ -23,64 +23,64 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: "API_PREFIX"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "NODE_ENV"
           valueFrom:
             configMapKeyRef:
               key: "NODE_ENV"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "PORT"
           valueFrom:
             configMapKeyRef:
               key: "PORT"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_TYPE"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_TYPE"
-              name: "ylz-xyz-project-svc-config-ncgj"
-        - name: "FIRESTORE_PROJECT_ID"
+              name: "ylz-xyz-device-svc-config-ncgj"
+        - name: "FIRESTORE_device_ID"
           valueFrom:
             configMapKeyRef:
-              key: "FIRESTORE_PROJECT_ID"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              key: "FIRESTORE_device_ID"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_PRIVATE_KEY_ID"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_PRIVATE_KEY_ID"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_PRIVATE_KEY"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_PRIVATE_KEY"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_CLIENT_EMAIL"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_CLIENT_EMAIL"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_CLIENT_ID"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_CLIENT_ID"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_AUTH_URI"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_AUTH_URI"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_TOKEN_URI"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_TOKEN_URI"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_AUTH_PROVIDER_X509_CERT_URL"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_AUTH_PROVIDER_X509_CERT_URL"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
         - name: "FIRESTORE_CLIENT_X509_CERT_URL"
           valueFrom:
             configMapKeyRef:
               key: "FIRESTORE_CLIENT_X509_CERT_URL"
-              name: "ylz-xyz-project-svc-config-ncgj"
+              name: "ylz-xyz-device-svc-config-ncgj"
